@@ -1,3 +1,11 @@
+
+Step 1 - Idea is to let the app take the picture of the bill using Camera App.
+
+<Camera> component to display a form/card to let camera take input and display back into the card
+Step 2 - Feed the bill to any LLM like ChatGPT/Gemini and ask for the Structured data
+Step 3 - Display the structured data back into the UI as a table
+
+
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
