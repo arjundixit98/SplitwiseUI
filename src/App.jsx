@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import CameraCard from './components/CameraCard'
 import './App.css'
 
