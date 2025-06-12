@@ -211,7 +211,7 @@ const BillTable = ({ billDetails, setBillDetails }) => {
                   SGST
                 </td>
                 <td className={rightCellClass}>
-                  {billDetails.summary.taxes.SGST.toFixed(2)}
+                  {billDetails.summary?.taxes?.SGST?.toFixed(2)}
                 </td>
               </tr>
               <tr className={totalRowClass}>
@@ -219,7 +219,7 @@ const BillTable = ({ billDetails, setBillDetails }) => {
                   CGST
                 </td>
                 <td className={rightCellClass}>
-                  {billDetails.summary.taxes.CGST.toFixed(2)}
+                  {billDetails.summary?.taxes?.CGST.toFixed(2)}
                 </td>
               </tr>
               <tr className={totalRowClass}>
@@ -227,7 +227,7 @@ const BillTable = ({ billDetails, setBillDetails }) => {
                   Round off
                 </td>
                 <td className={rightCellClass}>
-                  {billDetails.summary.round_off.toFixed(2)}
+                  {billDetails.summary?.round_off?.toFixed(2)}
                 </td>
               </tr>
               <tr className={totalRowClass}>

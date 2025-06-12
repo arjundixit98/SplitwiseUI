@@ -65,7 +65,6 @@ const CameraCard = () => {
         id="bill-upload"
         className="hidden"
         accept="image/*"
-        capture="environment"
         placeholder="Upload your bill!"
         onChange={handleImageChange}
       />
