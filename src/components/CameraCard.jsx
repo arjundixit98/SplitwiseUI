@@ -8,7 +8,7 @@ const CameraCard = () => {
   const [billDetails, setBillDetails] = useState(null);
 
   //function to upload the image to backend as formData
-  const handleUpload = async () => {
+  const handleUpload = async (billImageFile) => {
     if (!billImageFile) {
       console.error("No file selected");
       return;
@@ -16,10 +16,13 @@ const CameraCard = () => {
     const formData = new FormData();
     formData.append("image", billImageFile);
     try {
-      const response = await fetch("http://localhost:8000/api/llm/", {
-        method: "POST",
-        body: formData,
-      });
+      const response = await fetch(
+        `${import.meta.env.VITE_BACKEND_URL}/api/llm/`,
+        {
+          method: "POST",
+          body: formData,
+        }
+      );
 
       const data = await response.json();
       console.log(data);
@@ -38,9 +41,10 @@ const CameraCard = () => {
     if (event.target.files && event.target.files[0]) {
       setBillImageUrl(URL.createObjectURL(event.target.files[0]));
       const file = event.target.files[0];
-      setBillImageFile(file);
+      // setBillImageFile(file);
+      // console.log(file);
+      await handleUpload(file);
     }
-    await handleUpload();
   };
 
   return (

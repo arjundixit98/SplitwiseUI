@@ -113,7 +113,7 @@ const BillTable = ({ billDetails, setBillDetails }) => {
       <div className="flex flex-col mt-4 p-4 space-y-0">
         {/* Headers */}
         <div className="flex">
-          <table className="table-fixed w-[800px] border border-gray-300">
+          <table className="table-fixed w-full md:w-2/3 border border-gray-300">
             <thead className="bg-gray-100">
               <tr>
                 <th className={normalTableCellClass}> Name </th>
@@ -125,7 +125,7 @@ const BillTable = ({ billDetails, setBillDetails }) => {
           </table>
 
           {showSplitter && (
-            <table className="table-fixed w-[400px] border border-gray-300">
+            <table className="table-fixed w-full md:w-1/3 border border-gray-300">
               <thead className="bg-gray-100">
                 <tr>
                   {users.map((username) => (
@@ -142,7 +142,7 @@ const BillTable = ({ billDetails, setBillDetails }) => {
         {/* Rows */}
         {billDetails?.items?.map((item, itemIndex) => (
           <div key={itemIndex} className="flex">
-            <table className="table-fixed w-[800px] border border-gray-300">
+            <table className="table-fixed w-full md:w-2/3 border border-gray-300">
               <tbody>
                 <tr className="odd:bg-white even:bg-gray-50 hover:bg-gray-100">
                   <td className={totalTableCellClass}>{item.name}</td>
@@ -164,7 +164,7 @@ const BillTable = ({ billDetails, setBillDetails }) => {
             </table>
 
             {showSplitter && (
-              <table className="table-fixed w-[400px] border border-gray-300">
+              <table className="table-fixed w-full md:w-1/3 border border-gray-300">
                 <tbody>
                   <tr className="odd:bg-white even:bg-gray-50 hover:bg-gray-100">
                     {users.map((username) => (
@@ -187,7 +187,7 @@ const BillTable = ({ billDetails, setBillDetails }) => {
 
         {/* Summary rows */}
         <div className="flex mt-4">
-          <table className="table-fixed w-[800px] border border-gray-300">
+          <table className="table-fixed w-full md:w-2/3 border border-gray-300">
             <tbody>
               <tr className={totalRowClass}>
                 <td className={leftCellClass} colSpan={3}>
@@ -242,7 +242,7 @@ const BillTable = ({ billDetails, setBillDetails }) => {
           </table>
 
           {showSplitter && (
-            <table className="table-fixed w-[400px] border border-gray-300">
+            <table className="table-fixed w-full md:w-1/3 border border-gray-300">
               <tbody>
                 <tr className={totalRowClass}>
                   {users.map((username) => (
